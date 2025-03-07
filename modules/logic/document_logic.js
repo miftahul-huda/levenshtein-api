@@ -83,7 +83,9 @@ class DocumentLogic extends CommonLogic {
                 let documentPath =  documentFilename.replace(bucetName + "/", "")
                 let project = process.env.GCP_PROJECT;
                 //let url =  process.env.UPLOADER_API + "/upload/gcs-delete/" + project + "/" + bucetName + "/" + encodeURIComponent(documentPath)
-                let url =  process.env.UPLOADER_API + "/gcs/delete?path=" + project + ":" + bucetName + "/" + encodeURIComponent(documentPath)
+                //let url =  process.env.UPLOADER_API + "/gcs/delete?path=" + project + ":" + bucetName + "/" + encodeURIComponent(documentPath)
+                let url =  process.env.UPLOADER_API + "/gcs/delete?path=" + bucetName + "/" + encodeURIComponent(documentPath) + "&project=" + project;
+
 
                 console.log('delete url')
                 console.log(url)

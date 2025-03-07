@@ -3,7 +3,7 @@ runtime: nodejs16
 env: standard
 env_variables:
   APPLICATION_PORT: "8080" 
-  GCP_PROJECT: "levenshtein-dev"
+  GCP_PROJECT: "lv-tennant-spindo"
   GCP_UPLOAD_BUCKET: "levenshtein-upload-bucket"
   GCP_UPLOAD_FOLDER: "images"
   DBHOST: "34.101.122.219"

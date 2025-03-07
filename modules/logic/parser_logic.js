@@ -182,8 +182,12 @@ class ParserLogic
             //let upload_url = process.env.UPLOADER_API + "/upload/gcs/" + process.env.GCP_PROJECT;
             //upload_url += "/" + process.env.GCP_UPLOAD_BUCKET + "/" + process.env.GCP_UPLOAD_FOLDER;
 
-            let upload_url = process.env.UPLOADER_API + "/gcs/upload?path=" + process.env.GCP_PROJECT;
-            upload_url += ":" + process.env.GCP_UPLOAD_BUCKET + "/" + process.env.GCP_UPLOAD_FOLDER + "/";
+            //let upload_url = process.env.UPLOADER_API + "/gcs/upload?path=" + process.env.GCP_PROJECT;
+            //upload_url += ":" + process.env.GCP_UPLOAD_BUCKET + "/" + process.env.GCP_UPLOAD_FOLDER + "/";
+
+            let upload_url = process.env.UPLOADER_API + "/gcs/upload?path=" + process.env.GCP_UPLOAD_BUCKET + "/" + process.env.GCP_UPLOAD_FOLDER;
+            upload_url += "&project=" + process.env.GCP_PROJECT;
+
 
             let fname= images[idx].image;
             fname = fname.replace("gs://", "https://storage.googleapis.com/")
@@ -262,8 +266,12 @@ class ParserLogic
             //let upload_url = process.env.UPLOADER_API + "/upload/gcs/" + process.env.GCP_PROJECT;
             //upload_url += "/" + process.env.GCP_UPLOAD_BUCKET + "/" + process.env.GCP_UPLOAD_FOLDER;
 
-            let upload_url = process.env.UPLOADER_API + "/gcs/upload?path=" + process.env.GCP_PROJECT;
-            upload_url += ":" + process.env.GCP_UPLOAD_BUCKET + "/" + process.env.GCP_UPLOAD_FOLDER + "/";
+            //let upload_url = process.env.UPLOADER_API + "/gcs/upload?path=" + process.env.GCP_PROJECT;
+            //upload_url += ":" + process.env.GCP_UPLOAD_BUCKET + "/" + process.env.GCP_UPLOAD_FOLDER + "/";
+
+            let upload_url = process.env.UPLOADER_API + "/gcs/upload?path=" + process.env.GCP_UPLOAD_BUCKET + "/" + process.env.GCP_UPLOAD_FOLDER + "/";
+            upload_url += "&project=" + process.env.GCP_PROJECT;
+
 
             let fname= images[idx].image;
 

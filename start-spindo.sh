@@ -1,4 +1,4 @@
-gcloud config configurations activate lvsaas
+gcloud config configurations activate lv-saas
 rm .env
 cp .env-spindo .env
 rm Dockerfile

@@ -243,14 +243,17 @@ class OcrSessionLogic extends CommonLogic {
                 //let upload_url = process.env.UPLOADER_API + "/upload/gcs/" + process.env.GCP_PROJECT;
                 //upload_url += "/" + process.env.GCP_PROCESSING_BUCKET + "/";
 
-                let upload_url = process.env.UPLOADER_API + "/gcs/upload?path=" + process.env.DOWNLOAD_OCR_PROCESSING_PROJECT;
-                upload_url += ":" + process.env.DOWNLOAD_OCR_PROCESSING_BUCKET + "/";
+                //let upload_url = process.env.UPLOADER_API + "/gcs/upload?path=" + process.env.DOWNLOAD_OCR_PROCESSING_PROJECT;
+                //upload_url += ":" + process.env.DOWNLOAD_OCR_PROCESSING_BUCKET + "/";
+
+                let upload_url = process.env.UPLOADER_API + "/gcs/upload?path=" + "/" + process.env.DOWNLOAD_OCR_PROCESSING_BUCKET + "";
 
 
                 let uploadedFolder = process.env.DOWNLOAD_OCR_PROCESSING_FOLDER;
                 uploadedFolder = encodeURIComponent(uploadedFolder)
                 //upload_url += uploadedFolder;
-                upload_url += uploadedFolder + "/";
+                upload_url += "/" + uploadedFolder + "/";
+                upload_url += "&project=" + process.env.DOWNLOAD_OCR_PROCESSING_PROJECT;
 
 
                 console.log("upload_url")
